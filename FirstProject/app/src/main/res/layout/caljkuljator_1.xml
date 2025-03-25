@@ -3,8 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/calc1"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="410dp"
+    android:layout_height="650dp">
+    <!--tools:context=".CalculatorActivity">-->
+    <!--tools:context=".MainActivity">-->
 
     <Button
         android:id="@+id/button_delen"
@@ -107,5 +109,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_plus" />
+
+    <Button
+        android:id="@+id/back_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#3F51B5"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calc_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

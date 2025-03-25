@@ -3,15 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/buttons"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="410dp"
+    android:layout_height="650dp">
+    tools:context=".MainActivity">
+    <!--tools:context=".MainActivity">-->
 
     <Button
-        android:id="@+id/button_hw2"
+        android:id="@+id/button_open_calculator"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="350dp"
+        android:backgroundTint="#8BE91E63"
+        android:text="Calculator"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+        <!--android:onClick="calculatorActivity"-->
+
+    <Button
+        android:id="@+id/button_text_hw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="150dp"
         android:text="Button 2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,30 +36,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="90dp"
         android:text="Primary text 2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/text_hw1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:text="Primary text 1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
-        android:id="@+id/button_hw1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/button_open_music"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="120dp"
-        android:backgroundTint="#E91E63"
-        android:onClick="sayHello"
-        android:text="Button 1"
+        android:layout_marginTop="250dp"
+        android:backgroundTint="#FF9122"
+        android:text="Music"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+        <!--android:onClick="musicActivity"-->
 </androidx.constraintlayout.widget.ConstraintLayout>
