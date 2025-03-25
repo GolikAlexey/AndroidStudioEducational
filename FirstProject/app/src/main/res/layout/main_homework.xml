@@ -5,7 +5,7 @@
     android:id="@+id/buttons"
     android:layout_width="410dp"
     android:layout_height="650dp">
-    tools:context=".MainActivity">
+    <tools:context=".MainActivity">
     <!--tools:context=".MainActivity">-->
 
     <Button
