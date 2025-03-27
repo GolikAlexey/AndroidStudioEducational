@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/calc1"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -8,7 +10,7 @@
         android:id="@+id/button_delen"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:text="/"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -21,7 +23,7 @@
         android:id="@+id/button_umn"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:text="X"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -34,7 +36,7 @@
         android:id="@+id/button_minus"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:text="-"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -61,19 +63,19 @@
         android:id="@+id/number1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:inputType="number|numberDecimal"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/calc_result" />
 
     <EditText
         android:id="@+id/number2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:inputType="number|numberDecimal"
         android:textSize="24sp"
@@ -85,7 +87,7 @@
         android:id="@+id/button_plus"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:text="+"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -98,23 +100,23 @@
         android:id="@+id/calc_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="40dp"
         android:text="Calculation result"
         android:textAlignment="textStart"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_plus" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Button
         android:id="@+id/back_calc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#3F51B5"
         android:text="Back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calc_result" />
+        app:layout_constraintTop_toBottomOf="@+id/button_plus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
