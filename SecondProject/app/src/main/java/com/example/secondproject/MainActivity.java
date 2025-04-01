@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView primary_text2;
     private Button button_open_music;
     private Button button_open_calculator;
+    private Button button_open_animation;
     private Button test_button2;
 
     @Override
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         primary_text2 = findViewById(R.id.text_hw2);
         button_open_music = findViewById(R.id.button_open_music);
         button_open_calculator = findViewById(R.id.button_open_calculator);
+        button_open_animation = findViewById(R.id.button_open_animation);
         test_button2 = findViewById(R.id.button_text_hw);
 
         test_button2.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CalculatorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        button_open_animation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
                 startActivity(intent);
             }
         });

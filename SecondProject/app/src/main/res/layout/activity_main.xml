@@ -8,6 +8,18 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/button_open_animation"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="450dp"
+        android:backgroundTint="#FF9122"
+        android:text="Animation"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
         android:id="@+id/button_open_calculator"
         android:layout_width="200dp"
         android:layout_height="70dp"

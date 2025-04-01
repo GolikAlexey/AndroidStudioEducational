@@ -13,6 +13,28 @@
         android:theme="@style/Theme.SecondProject"
         tools:targetApi="31">
         <activity
+            android:name=".AnimationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SecondProject" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.CALKCULATOR" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MusicActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MUSIC" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
