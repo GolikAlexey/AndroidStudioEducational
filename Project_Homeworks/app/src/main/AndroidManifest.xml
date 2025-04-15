@@ -10,24 +10,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Tictactoe"
+        android:theme="@style/Theme.Project_Homeworks"
         tools:targetApi="31">
-        <activity
-            android:name=".activity_result_dialog"
-            android:exported="false"
-            android:theme="@style/Theme.Tictactoe" />
-        <activity
-            android:name=".ComplexPlayingField"
-            android:exported="false" />
-        <activity
-            android:name=".SimplePlayingField"
-            android:exported="false" />
-        <activity
-            android:name=".Multiplayer_playing_field"
-            android:exported="false" />
-        <activity
-            android:name=".MultiplayerSettings"
-            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
