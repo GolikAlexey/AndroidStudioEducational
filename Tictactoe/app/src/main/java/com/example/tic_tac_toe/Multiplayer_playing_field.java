@@ -1,16 +1,14 @@
 package com.example.tic_tac_toe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +18,6 @@ public class Multiplayer_playing_field extends AppCompatActivity {
 
     private TextView playerOneName;
     private TextView playerTwoName;
-
     private int activePlayer = 1;
     private int[] boxPositions = {0, 0, 0, 0, 0, 0, 0, 0, 0};
     private int totalSelectBoxes = 1;
@@ -33,6 +30,16 @@ public class Multiplayer_playing_field extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_multiplayer_playing_field);
+
+        Button exit_to_menu = findViewById(R.id.exit_menu_mp);
+
+        exit_to_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View V) {
+                Intent intent = new Intent(Multiplayer_playing_field.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         playerOneName = findViewById(R.id.playerOneName);
         playerTwoName = findViewById(R.id.playerTwoName);
@@ -53,15 +60,15 @@ public class Multiplayer_playing_field extends AppCompatActivity {
         playerOneName.setText(getPlayerOneName);
         playerTwoName.setText(getPlayerTwoName);
 
-        image1 = findViewById(R.id.image1);
-        image2 = findViewById(R.id.image2);
-        image3 = findViewById(R.id.image3);
-        image4 = findViewById(R.id.image4);
-        image5 = findViewById(R.id.image5);
-        image6 = findViewById(R.id.image6);
-        image7 = findViewById(R.id.image7);
-        image8 = findViewById(R.id.image8);
-        image9 = findViewById(R.id.image9);
+        image1 = findViewById(R.id.image1S);
+        image2 = findViewById(R.id.image2S);
+        image3 = findViewById(R.id.image3S);
+        image4 = findViewById(R.id.image4S);
+        image5 = findViewById(R.id.image5S);
+        image6 = findViewById(R.id.image6S);
+        image7 = findViewById(R.id.image7S);
+        image8 = findViewById(R.id.image8S);
+        image9 = findViewById(R.id.image9S);
 
         changePlayerTurn(activePlayer);
 
@@ -164,14 +171,14 @@ public class Multiplayer_playing_field extends AppCompatActivity {
             imageView.setImageResource(R.drawable.ximage);
 
             if (checkResults()){
-                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this, playerOneName.getText().toString() + " is a Winner!", Multiplayer_playing_field.this);
+                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this,playerOneName.getText().toString() + " is a Winner!", Multiplayer_playing_field.this, '1');
                 resultDialog.setCancelable(false);
                 resultDialog.show();
 
                 currentScoreOne++;
                 scorePlayerA.setText(String.valueOf(currentScoreOne));
             } else if (totalSelectBoxes == 9){
-                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this, "Match Draw", Multiplayer_playing_field.this);
+                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this, "Match Draw", Multiplayer_playing_field.this, '1');
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
@@ -182,14 +189,14 @@ public class Multiplayer_playing_field extends AppCompatActivity {
             imageView.setImageResource(R.drawable.oimage);
 
             if (checkResults()){
-                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this, playerTwoName.getText().toString() + " is a Winner!", Multiplayer_playing_field.this);
+                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this, playerTwoName.getText().toString() + " is a Winner!", Multiplayer_playing_field.this, '1');
                 resultDialog.setCancelable(false);
                 resultDialog.show();
 
                 currentScoreTwo++;
                 scorePlayerB.setText(String.valueOf(currentScoreTwo));
             } else if (totalSelectBoxes == 9){
-                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this, "Match Draw", Multiplayer_playing_field.this);
+                ResultDialog resultDialog = new ResultDialog(Multiplayer_playing_field.this, "Match Draw", Multiplayer_playing_field.this, '1');
                 resultDialog.setCancelable(false);
                 resultDialog.show();
             } else {
@@ -240,15 +247,15 @@ public class Multiplayer_playing_field extends AppCompatActivity {
         activePlayer = 1;
         totalSelectBoxes = 1;
 
-        image1 = findViewById(R.id.image1);
-        image2 = findViewById(R.id.image2);
-        image3 = findViewById(R.id.image3);
-        image4 = findViewById(R.id.image4);
-        image5 = findViewById(R.id.image5);
-        image6 = findViewById(R.id.image6);
-        image7 = findViewById(R.id.image7);
-        image8 = findViewById(R.id.image8);
-        image9 = findViewById(R.id.image9);
+        image1 = findViewById(R.id.image1S);
+        image2 = findViewById(R.id.image2S);
+        image3 = findViewById(R.id.image3S);
+        image4 = findViewById(R.id.image4S);
+        image5 = findViewById(R.id.image5S);
+        image6 = findViewById(R.id.image6S);
+        image7 = findViewById(R.id.image7S);
+        image8 = findViewById(R.id.image8S);
+        image9 = findViewById(R.id.image9S);
 
         image1.setImageResource(R.drawable.white_box);
         image2.setImageResource(R.drawable.white_box);

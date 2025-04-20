@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/multiplayer_settings"
+    android:id="@+id/multiplayer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Multiplayer_playing_field"
@@ -13,12 +13,12 @@
         android:id="@+id/linearLayoutOuter1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/exit_menu_mp">
 
         <LinearLayout
             android:id="@+id/playerOneLayoutOuter"
@@ -33,8 +33,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="Player One"
                 android:maxLines="1"
+                android:text="Player One"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -63,8 +63,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="Player Two"
                 android:maxLines="1"
+                android:text="Player Two"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -144,47 +144,21 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/image1"
+                android:id="@+id/image1S"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:srcCompat="@drawable/white_box" />
 
             <ImageView
-                android:id="@+id/image2"
+                android:id="@+id/image2S"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:srcCompat="@drawable/white_box" />
 
             <ImageView
-                android:id="@+id/image3"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_margin="8dp"
-                app:srcCompat="@drawable/white_box" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/image4"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_margin="8dp"
-                app:srcCompat="@drawable/white_box" />
-
-            <ImageView
-                android:id="@+id/image5"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:layout_margin="8dp"
-                app:srcCompat="@drawable/white_box" />
-
-            <ImageView
-                android:id="@+id/image6"
+                android:id="@+id/image3S"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_margin="8dp"
@@ -196,21 +170,47 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/image7"
+                android:id="@+id/image4S"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:srcCompat="@drawable/white_box" />
 
             <ImageView
-                android:id="@+id/image8"
+                android:id="@+id/image5S"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_margin="8dp"
                 app:srcCompat="@drawable/white_box" />
 
             <ImageView
-                android:id="@+id/image9"
+                android:id="@+id/image6S"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/white_box" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image7S"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/white_box" />
+
+            <ImageView
+                android:id="@+id/image8S"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/white_box" />
+
+            <ImageView
+                android:id="@+id/image9S"
                 android:layout_width="110dp"
                 android:layout_height="110dp"
                 android:layout_margin="8dp"
@@ -218,5 +218,17 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/exit_menu_mp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#E92A1E"
+        android:text="Exit to menu"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

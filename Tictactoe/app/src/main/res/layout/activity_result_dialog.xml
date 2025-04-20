@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/result_dialog"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResultDialog">
@@ -9,30 +10,28 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@color/lavender">
+        android:background="@color/lavender"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/messageText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Result"
-            android:gravity="center"
-            android:textColor="@color/white"
             android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="Result"
+            android:textColor="@color/white"
             android:textSize="18sp"
-            android:textStyle="bold"
-            />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/startAgainButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Start Again"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/blue"
             android:layout_margin="20dp"
-            app:cornerRadius="20dp"
-            />
+            android:backgroundTint="@color/white"
+            android:text="Start Again"
+            android:textColor="@color/blue"
+            app:cornerRadius="20dp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

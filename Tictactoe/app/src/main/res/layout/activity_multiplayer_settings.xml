@@ -5,7 +5,7 @@
     android:id="@+id/multiplayer_settings"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyltiplayerSettings"
+    tools:context=".MultiplayerSettings"
     android:background="#EDD1D9"
     android:padding="40dp">
 
