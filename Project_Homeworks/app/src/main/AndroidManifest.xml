@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Project_Homeworks"
         tools:targetApi="31">
         <activity
+            android:name=".Homework_13_04_2025"
+            android:exported="false" />
+        <activity
             android:name=".Demonstration"
             android:exported="false" />
         <activity
@@ -22,10 +25,10 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".NewCalculat"
+            android:name=".Calc_perquisite"
             android:exported="false" />
         <activity
-            android:name=".Homework_13_04_2025"
+            android:name=".NewCalculat"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
