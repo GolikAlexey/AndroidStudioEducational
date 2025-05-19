@@ -1,60 +1,50 @@
 package com.example.project_homeworks;
 
 import android.os.Bundle;
-import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
-import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.fragment.app.FragmentManager;
 
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 public class Homework_Fragments_1 extends AppCompatActivity {
+
+    TabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homework_fragments1);
 
-        MaterialToolbar materialToolbar = findViewById(R.id.materialToolbar);
-        setSupportActionBar(materialToolbar);
+        tabLayout = findViewById(R.id.tabs);
 
-        NavigationView navigationView = findViewById(R.id.navigation_view);
-        DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(Homework_Fragments_1.this, drawerLayout, materialToolbar, R.string.drawer_open, R.string.drawer_close);
-        drawerLayout.addDrawerListener(toggle);
-
-        replaceFragment(new FirstPage());
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.first_page){
-                    replaceFragment(new FirstPage());
-                    drawerLayout.closeDrawer(GravityCompat.START);
-                } else if (item.getItemId() == R.id.second_page) {
-                    replaceFragment(new SecondPage());
-                    drawerLayout.closeDrawer(GravityCompat.START);
+            public void onTabSelected(TabLayout.Tab tab) {
+                if(tab.getPosition() == 0){
+                    fragmentManager.beginTransaction().replace(R.id.fragmentContainerView, new FragmentOne()).commit();
+                } else if (tab.getPosition() == 1) {
+                    fragmentManager.beginTransaction().replace(R.id.fragmentContainerView, new FragmentTwo()).commit();
+                } else if (tab.getPosition() == 2) {
+                    fragmentManager.beginTransaction().replace(R.id.fragmentContainerView, new FragmentThree()).commit();
                 }
-                return false;
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
-
-    }
-
-    private void replaceFragment(Fragment fragment){
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.frame_layout, fragment);
-        fragmentTransaction.commit();
     }
 }

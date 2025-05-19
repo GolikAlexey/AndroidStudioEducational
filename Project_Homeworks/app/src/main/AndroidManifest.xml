@@ -19,7 +19,7 @@
             android:name=".MainActivityFragm"
             android:exported="false" />
         <activity
-            android:name=".activity_tab"
+            android:name=".ActivityTab"
             android:exported="false" />
         <activity
             android:name=".NewCalculat"
