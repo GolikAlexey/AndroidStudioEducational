@@ -17,9 +17,10 @@
             android:layout_height="wrap_content"
             android:background="@color/dark_green"
             app:navigationIcon="@drawable/baseline_menu_24"
-            app:title="My Application"
+            app:title="Lessons"
             app:titleTextColor="@color/white"
             android:paddingTop="20dp"
+
             />
 
     </com.google.android.material.appbar.AppBarLayout>

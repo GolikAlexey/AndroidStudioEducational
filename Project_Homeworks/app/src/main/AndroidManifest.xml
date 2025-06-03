@@ -34,13 +34,13 @@
             android:name=".Radiobuttons"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Homework_Fragments_1"
             android:exported="false" />
         <activity
             android:name=".Calc_perquisite"
             android:exported="false" />
         <activity
-            android:name=".Homework_Fragments_1"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
