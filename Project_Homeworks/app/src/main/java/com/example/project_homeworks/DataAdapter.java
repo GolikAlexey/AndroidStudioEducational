@@ -51,7 +51,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             super(itemView);
 
             textView = itemView.findViewById(R.id.textView);
-            imageView = itemView.findViewById(R.id.deleteIcon);
+            imageView = itemView.findViewById(R.id.korzina_card);
         }
     }
 }
