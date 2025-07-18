@@ -5,10 +5,11 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 
 import java.util.ArrayList;
 
-public class GameView {
+public class GameView extends SurfaceView implements Runnable{
     public static int maxX = 20; // размер по горизонтали
     public static int maxY = 28; // размер по вертикали
     public static float unitW = 0; // пикселей в юните по горизонтали
